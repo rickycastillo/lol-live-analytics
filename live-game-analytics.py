@@ -63,6 +63,10 @@ def main():
     # set on how many times this API may be called
     gameData = requestGameData(region, matchID, APIKey)
 
+    ###############################################
+    # ALGORITHM
+    ###############################################
+
 #This starts my program!
 if __name__ == "__main__":
     main()
