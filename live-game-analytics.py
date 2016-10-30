@@ -48,21 +48,20 @@ def main():
     print "Tier: " + rankedData[sumID][0]['tier']
     print "Division: " + rankedData[sumID][0]['entries'][0]['division']
     print "Points: " + (str)(rankedData[sumID][0]['entries'][0]['leaguePoints'])
-    print "\n"
 
     # get currentGame to extract the matchID
     currentGame = requestCurrentGameData(region, sumID, APIKey)
 
-    print currentGame
-
     # store the matchID
     matchID = (str)(currentGame['gameId'])
     
+    # print the match id
     print "Match ID: " + matchID
 
+    # get all the game information
+    # this command may not work sometimes as there is a limit
+    # set on how many times this API may be called
     gameData = requestGameData(region, matchID, APIKey)
-
-    print gameData
 
 #This starts my program!
 if __name__ == "__main__":
